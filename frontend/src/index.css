@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #1a0000;
+  color: white;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+}
+
+@keyframes pulse-portal {
+  0% {
+    transform: scale(0.9);
+    box-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff;
+  }
+  50% {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #ff00ff, 0 0 40px #ff00ff;
+  }
+  100% {
+    transform: scale(0.9);
+    box-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff;
+  }
+}
+
+.portal-anim {
+  animation: pulse-portal 1.5s infinite ease-in-out;
+}
+
+/* Base custom styles for cells */
+.cell-wall {
+  background-color: #2b0000;
+  border: 1px solid #110000;
+}
+
+.cell-path {
+  background-color: #3b0000;
+  border: 1px solid #220000;
+}
+
+.cell-wall-glowing {
+  background-color: #ff2e2e;
+  box-shadow: 0 0 8px #ff2e2e;
+  border: 1px solid #ff5e5e;
+}
+
+.cell-visited {
+  background-color: #5b0000;
+}
+
+.cell-shortest-path {
+  background-color: #ffff00;
+  box-shadow: 0 0 10px #ffff00;
+  border-radius: 4px;
+}
